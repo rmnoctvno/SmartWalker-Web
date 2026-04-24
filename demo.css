@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  background-color: #f9fafb;
+  line-height: 1.5;
+}
+
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Header */
+.header {
+  background: white;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #222;
+  text-decoration: none;
+}
+
+.logo1{
+  margin-top: 2px;
+  height: 55px;
+  width: 65px;
+}
+
+/* Underline Hover Effect */
+.nav a {
+  position: relative;
+  margin: 0 0.75rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Video Demonstration Section */
+
+.video-demo{
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.video-title{
+  font-size: 35px;
+  margin-bottom: 5px;
+}
+
+.video-description{
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.video-wrapper{
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+/* Responsive video container */
+.video-wrapper video{
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+}
+
+.role-title {
+  font-size: 1.5rem;
+  margin: 40px 0 20px;
+  color: #222;
+  text-align: left;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.step-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.step-card h4 {
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.step-card p {
+  color: #555;
+  font-size: 0.95rem;
+}

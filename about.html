@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SmartWalker</title>
+  <link rel="stylesheet" href="about.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" href="icons/logonotext.png" type="image/png">
+</head>
+<body>
+<div class="fade-container">
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img class="logo1" src="icons/smartwalkerLOGO.png" alt="SmartWalker Logo">
+      </a>
+      <nav class="nav">
+      </nav>
+    </div>
+  </header>
+
+  <section id="logo" class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>About Us</h1>
+        <br>
+        <h4>Smart Walker is an advanced mobility tool designed to improve the
+        safety and independence of seniors, visually impaired persons, and individuals with disabilities.
+        Its primary function is to prevent falls and accidents. The device uses
+        integrated technology, including a gyroscope for instant fall detection, a camera for
+        obstacle avoidance, and GPS for companion tracking.
+        <br>
+        <br>
+        This vital tech solution helps users move securely and independently.</h4>
+        <a class="btn-back" href="index.html">Back</a>
+      </div>
+      <div class="social-links">
+        <a class="social-icons" href="https://www.facebook.com/profile.php?id=61574729933102" aria-label="Facebook"><img src="icons/facebook.png" alt="Facebook Icon"></a>
+        <a class="social-icons" href="#" aria-label="Twitter"><img src="icons/twitter-alt-circle.png" alt="Twitter Icon"></a>
+        <a class="social-icons" href="#" aria-label="Instagram"><img src="icons/instagram.png" alt="Instagram Icon"></a>
+        <a class="social-icons" href="#" aria-label="YouTube"><img src="icons/youtube-circle.png" alt="Youtube Icon"></a>
+      </div>
+      <div class="hero-image">
+        <!-- <img src="icons/walker1.png" alt="SmartWalker device" /> -->
+      </div>
+    </div>
+  </section>
+</div>
+</body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const container = document.querySelector(".fade-container");
+
+  setTimeout(() => container.classList.add("fade-in"), 50);
+
+  const links = document.querySelectorAll("a[href]");
+  for (let link of links) {
+    const href = link.getAttribute("href");
+    if (href.startsWith("#") || href.startsWith("javascript:")) continue;
+
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      container.classList.remove("fade-in");
+      container.classList.add("fade-out");
+      setTimeout(() => {
+        window.location = href;
+      }, 600);
+    });
+  }
+});
+</script>
+</html>
